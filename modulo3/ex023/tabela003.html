@@ -22,6 +22,7 @@
     table {
         width: 500px;
         border-collapse: collapse;
+        position: relative;
     }
     td,th {
     border: 1px solid black;
@@ -30,9 +31,19 @@
         background-color: darkgray;
         color: white;
     }
-
+    thead > tr > th {
+        position: sticky;
+        top:-1px;
+        background-color:darkgray ;
+    }
     td.num {
         text-align: right;
+    }
+    tbody > tr:nth-child(even) { /*2n-1*/
+        background-color: darkcyan;
+    }
+    tbody > tr:nth-child(odd) { /*2n-1*/
+        background-color: thistle;
     }
 </style>
 
@@ -41,9 +52,9 @@
 <table>
     <thead>
         <tr>
-            <th>Posição</th>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col" style="width: 5px;">Posição</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </tr>
     </thead>
 
@@ -188,13 +199,16 @@
     </tbody>
 
     <tfoot>
-        <th>Total de Habitantes</th>
+        <th scope="row">Total de Habitantes</th>
         <th></th>
         <td class="num">210.147.125</td>
 
     </tfoot>
 
 </table>
-    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem unde error et dolores, sequi, sint facere sapiente eius, deserunt natus at necessitatibus consectetur nostrum eos. Ea rem doloribus accusamus quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui enim animi dignissimos fugiat inventore nobis impedit delectus harum, tempora, molestias sed quibusdam illum consequuntur quam unde. Ut architecto optio quisquam!quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem dolore quidem excepturi. Fugiat molestiae soluta, vel quia quaerat, delectus, iure ullam iusto illum repellendus nobis tempore quam rerum eum? </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem unde error et dolores, sequi, sint facere sapiente eius, deserunt natus at necessitatibus consectetur nostrum eos. Ea rem doloribus accusamus quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui enim animi dignissimos fugiat inventore nobis impedit delectus harum, tempora, molestias sed quibusdam illum consequuntur quam unde. Ut architecto optio quisquam!quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem dolore quidem excepturi. Fugiat molestiae soluta, vel quia quaerat, delectus, iure ullam iusto illum repellendus nobis tempore quam rerum eum? </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem unde error et dolores, sequi, sint facere sapiente eius, deserunt natus at necessitatibus consectetur nostrum eos. Ea rem doloribus accusamus quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui enim animi dignissimos fugiat inventore nobis impedit delectus harum, tempora, molestias sed quibusdam illum consequuntur quam unde. Ut architecto optio quisquam!quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem dolore quidem excepturi. Fugiat molestiae soluta, vel quia quaerat, delectus, iure ullam iusto illum repellendus nobis tempore quam rerum eum? </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem unde error et dolores, sequi, sint facere sapiente eius, deserunt natus at necessitatibus consectetur nostrum eos. Ea rem doloribus accusamus quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui enim animi dignissimos fugiat inventore nobis impedit delectus harum, tempora, molestias sed quibusdam illum consequuntur quam unde. Ut architecto optio quisquam!quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem dolore quidem excepturi. Fugiat molestiae soluta, vel quia quaerat, delectus, iure ullam iusto illum repellendus nobis tempore quam rerum eum? </p>
 </body>
 </html>
